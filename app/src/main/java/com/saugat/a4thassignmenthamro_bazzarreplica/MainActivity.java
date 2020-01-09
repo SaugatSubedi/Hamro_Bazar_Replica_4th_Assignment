@@ -14,6 +14,12 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toolbar;
 
+import com.saugat.a4thassignmenthamro_bazzarreplica.adapters.CategoryAdapter;
+import com.saugat.a4thassignmenthamro_bazzarreplica.adapters.ImageSliderAdapter;
+import com.saugat.a4thassignmenthamro_bazzarreplica.adapters.ProductAdapter;
+import com.saugat.a4thassignmenthamro_bazzarreplica.model.Category;
+import com.saugat.a4thassignmenthamro_bazzarreplica.model.Products;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -47,8 +53,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-
 
 
 
@@ -213,5 +217,5 @@ public class MainActivity extends AppCompatActivity {
         h.postDelayed(animateViewPager,ANIM_VIEWPAGER_DELAY);
     }
 }
-    }
-}
+
+

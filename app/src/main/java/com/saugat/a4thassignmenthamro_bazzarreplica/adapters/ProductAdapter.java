@@ -10,54 +10,62 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.saugat.a4thassignmenthamro_bazzarreplica.R;
 import com.saugat.a4thassignmenthamro_bazzarreplica.model.Category;
+import com.saugat.a4thassignmenthamro_bazzarreplica.model.Products;
 
 import java.util.List;
 
-public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.CategoryViewHolders> {
+public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductViewHolders>{
 
-    List<Category> categoryList;
+    List<Products> productsList;
     Context context;
 
-
-    public CategoryAdapter(List<Category> categoryList, Context context) {
-        this.categoryList = categoryList;
+    public ProductAdapter(List<Products> productsList, Context context) {
+        this.productsList = productsList;
         this.context = context;
     }
 
     @NonNull
     @Override
-    public CategoryViewHolders onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ProductViewHolders onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.layout_category, parent,false);
-        return new CategoryViewHolders(view);
+                .inflate(R.layout.layout_product,parent,false);
+        return new ProductViewHolders(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull CategoryViewHolders holder, int position) {
-        final Category category = categoryList.get(position);
+    public void onBindViewHolder(@NonNull ProductViewHolders holder, int position) {
+        final Products products = productsList.get(position);
 
-        holder.imgCatIcon.setImageResource(category.getIcons());
-        holder.tvCategory.setText(category.getCategory());
+        holder.tvProductName.setText(products.getProductName());
+        holder.tvPrice.setText(products.getProductPrice());
+        holder.tvUserOrNot.setText(products.getProductUseOrNot());
 
-
+        holder.imgProduct.setImageResource(products.getProductImage());
     }
 
     @Override
     public int getItemCount() {
-        return categoryList.size();
+        return productsList.size();
     }
 
-    public class CategoryViewHolders extends RecyclerView.ViewHolder{
-        ImageView imgCatIcon;
-        TextView tvCategory;
+    public class ProductViewHolders extends RecyclerView.ViewHolder{
 
+        TextView tvProductName, tvPrice, tvUserOrNot;
+        ImageView imgProduct;
 
-        public CategoryViewHolders(@NonNull View itemView) {
+        public ProductViewHolders(@NonNull View itemView) {
             super(itemView);
 
-            imgCatIcon = itemView.findViewById(R.id.imgCatIcon);
-            tvCategory = itemView.findViewById(R.id.tvCategory);
+            tvProductName = itemView.findViewById(R.id.tvProductName);
+            tvPrice = itemView.findViewById(R.id.tvPrice);
+            tvUserOrNot = itemView.findViewById(R.id.tvUserOrNot);
+
+            imgProduct = itemView.findViewById(R.id.imgProduct);
+
+
+
         }
     }
 }
