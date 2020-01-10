@@ -13,7 +13,7 @@ import com.saugat.a4thassignmenthamro_bazzarreplica.R;
 public class ImageSliderAdapter extends PagerAdapter {
 
     private Context mContext;
-    private int[] mImageIds = new int[]{R.drawable.cars, R.drawable.bikes, R.drawable.tables};
+    private int[] mImageIds = new int[]{R.drawable.carre, R.drawable.bikee, R.drawable.laptopee};
 
     private int custom_position = 0;
 
