@@ -1,13 +1,15 @@
 package com.saugat.a4thassignmenthamro_bazzarreplica.bll;
 
+
 import com.saugat.a4thassignmenthamro_bazzarreplica.api.UsersAPI;
 import com.saugat.a4thassignmenthamro_bazzarreplica.serverresponse.SignUpResponse;
+import com.saugat.a4thassignmenthamro_bazzarreplica.url.Url;
+
 
 import java.io.IOException;
 
 import retrofit2.Call;
 import retrofit2.Response;
-import retrofit2.http.Url;
 
 public class LoginBLL {
 
@@ -31,4 +33,5 @@ public class LoginBLL {
             e.printStackTrace();
         }
         return isSuccess;
+    }
 }

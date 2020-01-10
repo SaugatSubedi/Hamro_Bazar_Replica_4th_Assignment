@@ -1,5 +1,9 @@
 package com.saugat.a4thassignmenthamro_bazzarreplica.api;
 
+import com.saugat.a4thassignmenthamro_bazzarreplica.model.User;
+import com.saugat.a4thassignmenthamro_bazzarreplica.serverresponse.ImageResponse;
+import com.saugat.a4thassignmenthamro_bazzarreplica.serverresponse.SignUpResponse;
+
 import okhttp3.MultipartBody;
 import retrofit2.Call;
 import retrofit2.http.Body;
